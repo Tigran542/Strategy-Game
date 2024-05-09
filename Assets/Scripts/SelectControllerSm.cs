@@ -91,5 +91,5 @@ public class SelectController : MonoBehaviour
             Destroy(_cubeSelection);
         }
     }
-    //BIZOOOON
+    //BIZOOOON   //MEDNYI BYCHARAA
 }

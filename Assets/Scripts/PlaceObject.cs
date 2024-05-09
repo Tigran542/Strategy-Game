@@ -21,7 +21,10 @@ public class PlaceObject : MonoBehaviour
         PositionObject();
 
         if (Input.GetMouseButtonDown(0))
+        {
+            gameObject.GetComponent<AutoCarCreate>().enabled = true;
             Destroy(gameObject.GetComponent<PlaceObject>());
+        }
 
         if (Input.GetKey(KeyCode.Z))
             transform.Rotate(Vector3.up * Time.deltaTime * rotateSpeed);
