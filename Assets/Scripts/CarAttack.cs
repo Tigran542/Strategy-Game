@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CarAttack : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class CarAttack : MonoBehaviour
             (gameObject.CompareTag("Enemy") && el.gameObject.CompareTag("Player")))
 
             {
-                Debug.Log(el.name);
+                if (gameObject.CompareTag("Enemy"))
+                    GetComponent<NavMeshAgent>().SetDestination(el.transform.position);
             }
         }        
     } 
