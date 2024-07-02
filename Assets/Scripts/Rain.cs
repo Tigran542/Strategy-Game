@@ -34,7 +34,7 @@ public class Rain : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(10f, 15f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(30f, 45f));
 
 
             if (_isRain)           
