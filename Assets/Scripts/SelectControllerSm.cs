@@ -36,7 +36,9 @@ public class SelectController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             foreach(var el in players)
-                el.transform.GetChild(0).gameObject.SetActive(false);
+                if(el != null)
+                    el.transform.GetChild(0).gameObject.SetActive(false);
+
 
             players.Clear();
 
